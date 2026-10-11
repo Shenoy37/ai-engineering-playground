@@ -22,7 +22,8 @@ messages =[message]
 
 # making the api call 
 response  = client.chat.completions.create(model = model, messages = messages)
-print(response)
+ans = response.choices[0].message.content
+print(ans)
 
 
 
